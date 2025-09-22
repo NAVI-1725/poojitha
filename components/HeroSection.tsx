@@ -56,7 +56,7 @@ export default function HeroSection({
   if (!isClient) return null;
 
   const titles = [
-    "Horticulture Researcher",
+
     "Fields to Policy",
     "Sowing Ideas, Growing Sustainable Futures",
     "Harvesting Solutions for Rural Transformation",
@@ -98,7 +98,7 @@ export default function HeroSection({
         <h1 className="text-[clamp(1.8rem,5vw,3rem)] font-extrabold text-gray-800 dark:text-white leading-snug">
           Hi, I&apos;m{" "}
           <span className="text-green-700 dark:text-emerald-400">{name}</span>{" "}
-          🌱
+          .P
         </h1>
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-600 dark:text-gray-300">
           {title}{" "}

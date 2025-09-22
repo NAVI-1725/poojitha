@@ -192,7 +192,7 @@ export default function AboutSection({
           whileInView={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
         >
-          Interested in collaborating on sustainable agriculture, community projects, or horticulture research?
+         Interested in collaborating on Sustainable Development, Community Projects, or CSR ?
         </motion.p>
         <motion.button
           onClick={handleConnectClick}

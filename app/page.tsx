@@ -84,7 +84,7 @@ export default function Home() {
     },
     {
       degree: "B.Sc. (Hons) Horticulture",
-      institution: "HNB Garhwal University, Dehradun",
+      institution: "Hemavati Nandan Bahuguna Garwal University, Dehradun",
       duration: "2016–2020",
     },
   ];
@@ -117,14 +117,14 @@ export default function Home() {
         <section id="home">
           <HeroSection
             name="Penumarthi Poojitha Nagavalli"
-            title="Researcher in Sustainable Agriculture"
+            title="Researcher in Sustainable Development"
             tagline="Designing innovative farming models for crop diversity & climate resilience"
           />
         </section>
 
         <section id="about">
   <AboutSection
-    bio=" I’m Penumarthi Poojitha Nagavalli, an agriculture and sustainability professional with strong experience in horticulture, climate-resilient farming, and CSR project management. I specialize in crop diversity, natural farming, and value chain strengthening, with proven work at ICAR–NIRCA and WASSAN. Passionate about policy-making and community-driven innovation, I focus on translating grassroots insights into scalable, evidence-based solutions that align farmer livelihoods with global sustainability goals, bridging research, practice, and impact-driven development."
+    bio="  I am Penumarthi Poojitha Nagavalli, a professional driving impactful, community-centered solutions. I specialize in program design, value chain optimization, and stakeholder engagement, having delivered measurable results at ICAR–NIRCA and WASSAN. Passionate about policy-making, innovation, and inclusive development, I translate grassroots insights into scalable, evidence-based strategies that enhance livelihoods, foster resilience, and bridge research, practice, and high-impact transformation across sectors."
     phone="+91 9634784127"
     email="ppnvalli123@gmail.com"
     location="Rajahmundry, Andhra Pradesh"

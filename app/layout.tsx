@@ -7,7 +7,7 @@ import SeoSchema from "@/components/SeoSchema";
 export const metadata = {
   title: "Penumarthi Poojitha Nagavalli - Portfolio",
   description:
-    "The official portfolio of Penumarthi Poojitha Nagavalli — a researcher in sustainable agriculture, focusing on crop diversity, climate-resilient farming, and innovative value-added products. Experienced in project management, soil and crop research, and herbal product development.",
+    "The official portfolio of Penumarthi Poojitha Nagavalli — a Researcher in Sustainable Development, focusing on crop diversity, climate-resilient farming, and innovative value-added products. Experienced in project management, soil and crop research, and herbal product development.",
   keywords: [
     "Penumarthi Poojitha Nagavalli",
     "Poojitha Nagavalli",
@@ -52,7 +52,7 @@ export const metadata = {
 
   openGraph: {
     title: "Penumarthi Poojitha Nagavalli - Portfolio",
-    description: "Researcher in sustainable agriculture — Explore my projects, publications, and work experience.",
+    description: "Researcher in Sustainable Development — Explore my projects, publications, and work experience.",
     url: "https://researchgate.net/profile/Poojitha-Nagavalli",
     siteName: "Penumarthi Poojitha Nagavalli - Portfolio",
     images: [
