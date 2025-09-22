@@ -3,65 +3,62 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "Sustainable Agriculture", logo: "/skill logos/sustainability.png", bg: "/skill logos/feild1.jpg" },
-  { name: "Crop Physiology", logo: "/skill logos/crops.png", bg: "/skill logos/feild2.jpg" },
-  { name: "Soil Health Analysis", logo: "/skill logos/soil.png", bg: "/skill logos/feild3.jpg" },
-  { name: "Post-Harvest Management", logo: "/skill logos/post-harvest.png", bg: "/skill logos/feild4.jpg" },
-  { name: "Protected Cultivation", logo: "/skill logos/greenhouse.png", bg: "/skill logos/feild5.jpg" },
-  { name: "Academic Writing & Research", logo: "/skill logos/documentation.png", bg: "/skill logos/feild6.jpg" },
+  { name: "Community Engagement, Capacity Building & Farmer Empowerment", bg: "/skill logos/feild1.jpg" },
+  { name: "Communication & Knowledge Dissemination", bg: "/skill logos/feild2.jpg" },
+  { name: "Soil Health Analysis", bg: "/skill logos/feild3.jpg" },
+  { name: "Monitoring, Evaluation & Reporting", bg: "/skill logos/feild4.jpg" },
+  { name: "Linking Grassroots Insights with Policy & Development Goals", bg: "/skill logos/feild5.jpg" },
+  { name: "Policy Support & Evidence-Based Program Design", bg: "/skill logos/feild6.jpg" },
 ];
 
 export default function ResearchSkillsSection() {
   return (
     <section
       id="research-skills"
-      className="relative pt-32 pb-40 dark:bg-[#0f172a] transition-colors duration-500"
+      className="relative pt-32 pb-40 bg-gradient-to-br from-green-50 via-white to-emerald-100 dark:from-[#0f172a] dark:via-[#1e293b] dark:to-[#0f172a] transition-colors duration-700"
     >
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-20 text-4xl md:text-5xl font-extrabold text-center mb-20 md:mb-24 bg-gradient-to-r from-green-600 via-emerald-500 to-lime-500 text-transparent bg-clip-text tracking-tight drop-shadow-2xl"
+        className="relative z-20 text-4xl md:text-5xl font-extrabold text-center mb-20 bg-gradient-to-r from-green-600 via-emerald-500 to-lime-500 text-transparent bg-clip-text tracking-tight drop-shadow-2xl"
       >
         🌱 Key Skills & Expertise
       </motion.h2>
 
-      <div className="space-y-20">
+      {/* Grid Layout */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6 md:px-12 max-w-7xl mx-auto">
         {skills.map((skill, idx) => (
-          <div
+          <motion.div
             key={idx}
-            className="relative w-full h-[70vh] rounded-3xl overflow-hidden shadow-2xl"
+            className="relative h-[50vh] rounded-3xl overflow-hidden shadow-xl group"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: idx * 0.15 }}
+            whileHover={{ scale: 1.03 }}
           >
             {/* Background Image */}
             <motion.img
               src={skill.bg}
               alt={skill.name}
-              className="absolute inset-0 w-full h-full object-cover object-center brightness-105 contrast-110"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, delay: idx * 0.2 }}
+              className="absolute inset-0 w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-110"
             />
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/25 z-10"></div>
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent z-10 transition-all duration-500 group-hover:from-emerald-900/70 group-hover:via-emerald-700/30" />
 
-            {/* Skill Card */}
+            {/* Skill Name */}
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative z-20 w-64 bg-white/75 dark:bg-white/15 backdrop-blur-md border border-white/30 dark:border-white/10 rounded-3xl shadow-lg p-6 flex flex-col items-center justify-center mx-auto mt-[10vh]"
+              className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 text-center px-4"
             >
-              <img
-                src={skill.logo}
-                alt={skill.name}
-                className="h-16 w-16 object-contain mb-3 transition-transform duration-300 group-hover:scale-125"
-              />
-              <span className="text-center text-sm font-semibold text-gray-800 dark:text-gray-100">
+              <span className="text-lg md:text-xl font-semibold text-white drop-shadow-lg">
                 {skill.name}
               </span>
             </motion.div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
