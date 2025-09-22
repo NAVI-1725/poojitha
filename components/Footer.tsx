@@ -9,7 +9,7 @@ export default function Footer() {
         
         {/* Left: Branding */}
         <div className="text-center text-xs text-gray-300 order-2 md:order-1 w-full md:w-auto">
-          © {new Date().getFullYear()} Penumarthi Poojitha Nagavalli — Horticulture | Sustainable Agriculture | Climate Resilience
+          © {new Date().getFullYear()} Penumarthi Poojitha Nagavalli — Monitoring, Evaluation & Reporting (M&E) • Community Engagement & Capacity Building • Policy Support & Evidence-Based Strategy
         </div>
 
         {/* Right: Social Icons */}
@@ -43,17 +43,6 @@ export default function Footer() {
             className="hover:text-emerald-400 transition"
           >
             <SiResearchgate className="h-5 w-5" />
-          </a>
-
-          {/* WhatsApp */}
-          <a
-            href="https://wa.me/919634784127?text=Hi%20Poojitha%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect."
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-            className="hover:text-green-400 transition"
-          >
-            <FaWhatsapp className="h-5 w-5" />
           </a>
         </div>
       </div>

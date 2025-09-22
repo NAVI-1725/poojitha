@@ -125,7 +125,6 @@ export default function Home() {
         <section id="about">
   <AboutSection
     bio="  I am Penumarthi Poojitha Nagavalli, a professional driving impactful, community-centered solutions. I specialize in program design, value chain optimization, and stakeholder engagement, having delivered measurable results at ICAR–NIRCA and WASSAN. Passionate about policy-making, innovation, and inclusive development, I translate grassroots insights into scalable, evidence-based strategies that enhance livelihoods, foster resilience, and bridge research, practice, and high-impact transformation across sectors."
-    phone="+91 9634784127"
     email="ppnvalli123@gmail.com"
     location="Rajahmundry, Andhra Pradesh"
     linkedin="https://linkedin.com/in/poojitha-nagavalli"

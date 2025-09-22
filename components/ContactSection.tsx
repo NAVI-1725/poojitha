@@ -11,12 +11,7 @@ export default function ContactSection() {
   const contactRef = useRef<HTMLDivElement>(null);
 
   const icons = [
-    {
-      href: "https://wa.me/919634784127", // Poojitha's phone
-      icon: <FaWhatsapp />,
-      color: "text-green-500",
-      shadow: "hover:shadow-green-400",
-    },
+
     {
       href: "mailto:ppnvalli123@gmail.com", // Poojitha's email
       icon: <FaEnvelope />,
@@ -109,27 +104,8 @@ export default function ContactSection() {
             transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
             className="text-base md:text-lg font-medium text-gray-700 dark:text-white"
           >
-            📞 +91 96347 84127
           </motion.p>
 
-          {/* Schedule Meeting Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="flex flex-col items-center mt-16"
-          >
-            <p className="text-xl md:text-2xl font-bold text-green-600 dark:text-green-400 mb-6">
-              Schedule a Meeting
-            </p>
-
-            <motion.button
-              onClick={handleArrowClick}
-              className="flex items-center justify-center w-16 h-16 rounded-full border-2 border-green-500 dark:border-green-400 text-3xl text-green-600 dark:text-green-400 animate-bounce hover:bg-green-100 dark:hover:bg-green-900 transition"
-            >
-              <IoIosArrowDown />
-            </motion.button>
-          </motion.div>
         </section>
       )}
 
