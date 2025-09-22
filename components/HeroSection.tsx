@@ -57,10 +57,11 @@ export default function HeroSection({
 
   const titles = [
     "Horticulture Researcher",
-    "Sustainable Agriculture",
-    "Plant Science Enthusiast",
-    "Climate Resilience Explorer",
-    "Agroecology & Soil Health Learner",
+    "Fields to Policy",
+    "Sowing Ideas, Growing Sustainable Futures",
+    "Harvesting Solutions for Rural Transformation",
+    "Bridging Communities, Crops, and Policy for Lasting Impact",
+    "From Soil to Strategy: Driving Sustainable Development",
   ];
 
   return (
@@ -174,13 +175,6 @@ export default function HeroSection({
           <p className="text-base font-semibold text-gray-800 dark:text-gray-200 mb-1">Resume</p>
           <FileText className="w-7 h-7 text-green-700 dark:text-emerald-400 mb-2" />
           <div className="flex items-center gap-4">
-            <button
-              onClick={() => setShowResume(true)}
-              className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition text-sm sm:text-base"
-            >
-              <FaEye className="w-5 h-5" />
-              View
-            </button>
             <a
               href="/resume.pdf"
               download
@@ -193,101 +187,7 @@ export default function HeroSection({
         </div>
       </motion.div>
 
-      {/* Resume Modal */}
-      <AnimatePresence>
-        {showResume && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4 py-6"
-            onClick={handleBackdropClick}
-          >
-            <motion.div
-              ref={resumeRef}
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-3xl w-full p-8 overflow-y-auto max-h-[90vh]"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="flex justify-between items-center mb-6">
-                <h3 className="text-3xl font-bold text-gray-800 dark:text-white">
-                  🌿 {name}
-                </h3>
-                <button
-                  onClick={handleCloseResume}
-                  className="text-gray-500 hover:text-red-500 text-2xl font-bold"
-                >
-                  ×
-                </button>
-              </div>
-              <div className="grid gap-6">
-                {[
-                  {
-                    title: "🎯 Professional Summary",
-                    content:
-                      "Dedicated Horticulture graduate with research experience in crop production, plant breeding, and climate-resilient agriculture. Skilled in sustainable farming practices and academic writing. Passionate about contributing to food security and environmental sustainability.",
-                  },
-                  {
-                    title: "🎓 Education",
-                    content:
-                      "B.Sc. (Hons) Horticulture – Dr. YSR Horticultural University (2019 – 2023)",
-                  },
-                  {
-                    title: "🌱 Research Interests",
-                    content:
-                      "Sustainable agriculture, crop physiology, post-harvest management, soil health, and climate adaptation in horticulture.",
-                  },
-                ].map((item, index) => (
-                  <div key={index} className="p-4 bg-gray-100 dark:bg-gray-800 rounded-xl shadow-sm">
-                    <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
-                    <p className="whitespace-pre-line">{item.content}</p>
-                  </div>
-                ))}
-                <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-xl shadow-sm">
-                  <h4 className="text-xl font-semibold mb-2">📜 Certifications</h4>
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>Training in Protected Cultivation – Dr. YSRHU</li>
-                    <li>Workshop on Post-Harvest Management of Fruits & Vegetables</li>
-                    <li>Research Paper Presentation – Climate-Resilient Horticulture</li>
-                  </ul>
-                </div>
-                <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-xl shadow-sm">
-                  <h4 className="text-xl font-semibold mb-2">🏆 Achievements</h4>
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>Gold Medal – B.Sc. (Hons) Horticulture</li>
-                    <li>Published Research Paper in International Journal of Agricultural Sciences</li>
-                    <li>Recipient of State Merit Scholarship</li>
-                  </ul>
-                </div>
-                <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-xl shadow-sm">
-                  <h4 className="text-xl font-semibold mb-2">🔗 Links</h4>
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/in/poojitha-nagavalli-penumarthi-a57777240/"
-                        className="text-green-600 underline"
-                      >
-                        LinkedIn
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.researchgate.net/profile/Poojitha-Penumarthi"
-                        className="text-green-600 underline"
-                      >
-                        ResearchGate
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      
     </section>
   );
 }
