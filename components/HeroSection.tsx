@@ -57,7 +57,7 @@ export default function HeroSection({
 
   const titles = [
     "Horticulture Researcher",
-    "Sustainable Agriculture Advocate",
+    "Sustainable Agriculture",
     "Plant Science Enthusiast",
     "Climate Resilience Explorer",
     "Agroecology & Soil Health Learner",

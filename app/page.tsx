@@ -124,10 +124,10 @@ export default function Home() {
 
         <section id="about">
   <AboutSection
-    bio="I'm Penumarthi Poojitha Nagavalli, a horticulture and sustainable agriculture researcher dedicated to climate-resilient farming, biodiversity conservation, and crop innovation. With experience at ICAR-NIRCA and Watershed Support Services Network, I design innovative farming models, promote natural farming, and lead community-driven agricultural projects."
+    bio=" I’m Penumarthi Poojitha Nagavalli, an agriculture and sustainability professional with strong experience in horticulture, climate-resilient farming, and CSR project management. I specialize in crop diversity, natural farming, and value chain strengthening, with proven work at ICAR–NIRCA and WASSAN. Passionate about policy-making and community-driven innovation, I focus on translating grassroots insights into scalable, evidence-based solutions that align farmer livelihoods with global sustainability goals, bridging research, practice, and impact-driven development."
     phone="+91 9634784127"
     email="ppnvalli123@gmail.com"
-    location="Flat No - G1, Veerabhadra Appartements, Syamala Nagar, Rajahmundry, Andhra Pradesh, 533103"
+    location="Rajahmundry, Andhra Pradesh"
     linkedin="https://linkedin.com/in/poojitha-nagavalli"
     website="https://researchgate.net/profile/Poojitha-Penumarthi"
   />

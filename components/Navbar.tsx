@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -53,11 +52,25 @@ export default function Navbar() {
     }
   }, [darkMode]);
 
+  // Smooth scroll handler for hash links
+  const handleScrollTo = (href: string) => {
+    const section = document.querySelector(href);
+    section?.scrollIntoView({ behavior: "smooth" });
+    setMenuOpen(false); // close mobile menu if open
+  };
+
   return (
     <header className="fixed top-0 w-full z-50 bg-white/30 dark:bg-gray-900/30 backdrop-blur-md shadow-lg transition-colors duration-300">
       <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo & Name */}
-        <Link href="#home" className="flex items-center space-x-3">
+        <a
+          href="#home"
+          onClick={(e) => {
+            e.preventDefault();
+            handleScrollTo("#home");
+          }}
+          className="flex items-center space-x-3"
+        >
           <img
             src="/favicon.ico"
             alt="Penumarthi Poojitha Nagavalli Logo"
@@ -72,7 +85,7 @@ export default function Navbar() {
           >
             Penumarthi Poojitha Nagavalli
           </motion.span>
-        </Link>
+        </a>
 
         {/* Desktop Menu & Controls */}
         <div className="flex items-center space-x-4">
@@ -87,8 +100,12 @@ export default function Navbar() {
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <Link
+                  <a
                     href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleScrollTo(item.href);
+                    }}
                     className={`relative px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 ${
                       isActive
                         ? "bg-gradient-to-r from-green-600 via-emerald-500 to-lime-500 text-white shadow-md"
@@ -96,7 +113,7 @@ export default function Navbar() {
                     }`}
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 </motion.div>
               );
             })}
@@ -139,10 +156,13 @@ export default function Navbar() {
             {navItems.map((item) => {
               const isActive = activeSection === item.href;
               return (
-                <Link
+                <a
                   key={item.label}
                   href={item.href}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleScrollTo(item.href);
+                  }}
                   className={`text-base px-6 py-2 rounded-xl font-medium transition-all duration-300 ${
                     isActive
                       ? "bg-gradient-to-r from-green-600 via-emerald-500 to-lime-500 text-white shadow-md"
@@ -150,7 +170,7 @@ export default function Navbar() {
                   }`}
                 >
                   {item.label}
-                </Link>
+                </a>
               );
             })}
           </motion.div>

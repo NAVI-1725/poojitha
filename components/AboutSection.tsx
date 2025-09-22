@@ -136,7 +136,7 @@ export default function AboutSection({
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.8 }}
             >
-              Researcher • Horticulturist • Advocate of Sustainable Agriculture
+              Researcher • Horticulturist • Sustainable Agriculture
             </motion.p>
           </div>
         </div>
