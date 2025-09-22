@@ -2,7 +2,7 @@ export const projects = [
     {
       title: "My Portfolio Website",
       description: "A sleek personal portfolio made with Next.js and Tailwind.",
-      link: "https://navya-sree-ram-kumar-chowdary.vercel.app/",
+      link: "https://poojitha-nagavalli.vercel.app//",
     },
     {
       title: "E-commerce App",
