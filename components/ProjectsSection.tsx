@@ -2,72 +2,27 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
 
-const projects = [
-  {
-    title: "FOLU India – FISRAP Project",
-    timeline: "2023 – 2024",
-    description: "Developed climate-resilient strategies for rainfed agriculture, enhancing crop diversity and sustainability.",
-    image: "/images/projects/folu.png",
-    codeLink: "#",
-    liveLink: "#",
-    techStack: ["Climate Strategy", "Agroecology", "Sustainability"],
-  },
-  {
-    title: "CROPS4HD Project",
-    timeline: "2023",
-    description: "Promoted orphan crops in Karnataka to improve dietary diversity and nutrition security.",
-    image: "/images/projects/crops4hd.png",
-    codeLink: "#",
-    liveLink: "#",
-    techStack: ["Biodiversity", "Nutrition", "Seed Systems"],
-  },
-  {
-    title: "ICAR-NIRCA Value Addition Project",
-    timeline: "2024 – Present",
-    description: "Worked on product diversification and value addition of Turmeric, Ashwagandha, and Chilli. Focused on quality and FSSAI compliance.",
-    image: "/images/projects/icar.png",
-    codeLink: "#",
-    liveLink: "#",
-    techStack: ["Food Processing", "Quality Control", "FSSAI"],
-  },
-  {
-    title: "CSR Projects – Satya Sai & North Karnataka",
-    timeline: "2023 – 2024",
-    description: "Led natural/organic farming initiatives, biodiversity conservation, and farmer community outreach under CSR activities.",
-    image: "/images/projects/csr.png",
-    codeLink: "#",
-    liveLink: "#",
-    techStack: ["Organic Farming", "Community Outreach", "CSR"],
-  },
-  {
-    title: "Soil Nutrient & Crop Diversity Trials",
-    timeline: "2022 – 2023",
-    description: "Conducted soil nutrient analysis and crop diversity trials for sustainable agriculture practices in dryland ecosystems.",
-    image: "/images/projects/soil.png",
-    codeLink: "#",
-    liveLink: "#",
-    techStack: ["Soil Testing", "Agro-Biodiversity", "Field Trials"],
-  },
-  {
-    title: "Training Programs",
-    timeline: "2022 – 2024",
-    description: "Completed training in Herbal Extraction (ICAR-DMAPR), Nursery Management, and Agriculture 4.0 (digital tools in farming).",
-    image: "/images/projects/training.png",
-    codeLink: "#",
-    liveLink: "#",
-    techStack: ["Herbal Extraction", "Nursery Management", "AgriTech"],
-  },
-];
+interface Project {
+  title: string;
+  description: string;
+  timeline?: string;
+  image?: string;
+  codeLink?: string;
+  liveLink?: string;
+  techStack?: string[];
+}
 
-export default function ProjectsSection() {
-  const pathname = usePathname();
+interface ProjectsSectionProps {
+  projects: Project[];
+}
+
+export default function ProjectsSection({ projects }: ProjectsSectionProps) {
   const [sectionKey, setSectionKey] = useState(0);
 
   useEffect(() => {
     setSectionKey(Date.now());
-  }, [pathname]);
+  }, [projects]);
 
   const handleUnavailableClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();

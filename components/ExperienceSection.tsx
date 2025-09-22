@@ -2,52 +2,21 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
-export default function ExperienceSection() {
-  const experiences = [
-    {
-      title: "Young Professional",
-      org: "ICAR - National Institute for Research on Climate Resilient Agriculture (NIRCA), Rajahmundry",
-      desc: "Focused on product diversification, value addition, quality control, and development of innovative products using turmeric and ashwagandha while ensuring compliance with FSSAI standards.",
-      logo: "/experience/ICAR-1.png",
-      year: "Aug 2024 – Present",
-    },
-    {
-      title: "Program Officer",
-      org: "Watershed Support Services & Activities Network (WASSAN), Rayalaseema",
-      desc: "Worked on seed systems, natural/organic farming, biodiversity conservation, CSR projects, and soil nutrient analysis. Supported community-led agricultural development initiatives across Andhra Pradesh and Karnataka.",
-      logo: "/experience/wassam.png",
-      year: "Mar 2023 – Aug 2024",
-    },
-    {
-      title: "Project Researcher",
-      org: "FOLU India – FISRAP Project",
-      desc: "Contributed to developing climate-resilient rainfed agriculture strategies for marginalized farmers, integrating sustainability and crop diversity.",
-      logo: "/experience/FOLU.png",
-      year: "2023",
-    },
-    {
-      title: "Project Associate",
-      org: "CROPS4HD – Bioversity International & Partners",
-      desc: "Promoted orphan crops in Karnataka to improve nutrition, food diversity, and farmer seed systems through collaborative field research and training programs.",
-      logo: "/experience/bioversity.png",
-      year: "2022 – 2023",
-    },
-    {
-      title: "Academic Publications",
-      org: "Research Journals & Book Chapters",
-      desc: "Published multiple works on strawberry cultivation, papaya seed treatment, and quality fruit production across reputed journals including AJBS, IJRAR, IJECC, IJPS, and Rubicon book chapters.",
-      logo: "/experience/acedemic.png",
-      links: [
-        {
-          name: "ResearchGate",
-          url: "https://www.researchgate.net/profile/Poojitha-Penumarthi",
-        },
-      ],
-    },
-  ];
+interface Experience {
+  title: string;
+  org: string;
+  desc: string;
+  logo?: string;
+  year?: string;
+  links?: { name: string; url: string }[];
+}
 
+interface ExperienceSectionProps {
+  experiences: Experience[];
+}
+
+export default function ExperienceSection({ experiences }: ExperienceSectionProps) {
   return (
     <section
       id="experience"

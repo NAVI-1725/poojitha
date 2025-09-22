@@ -59,28 +59,22 @@ export default function Home() {
     return () => window.removeEventListener('wheel', handleWheel);
   }, []);
 
-  const experiences: Experience[] = [
-    {
-      role: "Young Professional",
-      company: "ICAR-NIRCA, Rajahmundry",
-      duration: "Aug 2024 – Present",
-      details: [
-        "Product diversification, value addition, marketing strategies",
-        "New product development with turmeric & ashwagandha",
-        "Quality control & FSSAI compliance",
-      ],
-    },
-    {
-      role: "Program Officer",
-      company: "Watersheds Support Services & Activities Network, Rayalaseema",
-      duration: "Mar 2023 – Aug 2024",
-      details: [
-        "Research on seed systems, natural/organic farming, biodiversity conservation",
-        "CSR projects in Satya Sai District & North Karnataka",
-        "Soil nutrient analysis and crop diversity trials",
-      ],
-    },
-  ];
+  const experiences = [
+  {
+    title: "Young Professional",
+    org: "ICAR-NIRCA, Rajahmundry",
+    desc: "Product diversification, value addition, marketing strategies. New product development with turmeric & ashwagandha. Quality control & FSSAI compliance.",
+    logo: "/experience/ICAR-1.png",
+    year: "Aug 2024 – Present",
+  },
+  {
+    title: "Program Officer",
+    org: "Watersheds Support Services & Activities Network, Rayalaseema",
+    desc: "Research on seed systems, natural/organic farming, biodiversity conservation. CSR projects in Satya Sai District & North Karnataka. Soil nutrient analysis and crop diversity trials.",
+    logo: "/experience/wassam.png",
+    year: "Mar 2023 – Aug 2024",
+  },
+];
 
   const education: Education[] = [
     {
@@ -129,15 +123,16 @@ export default function Home() {
         </section>
 
         <section id="about">
-          <AboutSection
-            bio="Experienced researcher focused on sustainable agriculture, crop diversity, climate-resilient farming, value addition of turmeric & ashwagandha, and impactful project management."
-            phone="+91 9634784127"
-            email="ppnvalli123@gmail.com"
-            location="Flat No - G1, Veerabhadra Appartements, Syamala Nagar, Rajahmundry, Andhra Pradesh, 533103"
-            linkedin="https://linkedin.com/in/poojitha-nagavalli"
-            website="https://researchgate.net/profile/Poojitha-Nagavalli"
-          />
-        </section>
+  <AboutSection
+    bio="I'm Penumarthi Poojitha Nagavalli, a horticulture and sustainable agriculture researcher dedicated to climate-resilient farming, biodiversity conservation, and crop innovation. With experience at ICAR-NIRCA and Watershed Support Services Network, I design innovative farming models, promote natural farming, and lead community-driven agricultural projects."
+    phone="+91 9634784127"
+    email="ppnvalli123@gmail.com"
+    location="Flat No - G1, Veerabhadra Appartements, Syamala Nagar, Rajahmundry, Andhra Pradesh, 533103"
+    linkedin="https://linkedin.com/in/poojitha-nagavalli"
+    website="https://researchgate.net/profile/Poojitha-Penumarthi"
+  />
+</section>
+
 
         <section id="experience">
           <ExperienceSection experiences={experiences} />

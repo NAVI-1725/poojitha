@@ -1,9 +1,9 @@
-# *
+# Allow all crawlers
 User-agent: *
 Allow: /
 
-# Host
-Host: https://navya-sree-ram-kumar-chowdary.vercel.app
+# Host (your new deployment URL)
+Host: https://poojitha-nagavalli.vercel.app
 
-# Sitemaps
-Sitemap: https://navya-sree-ram-kumar-chowdary.vercel.app/sitemap.xml
+# Sitemap location
+Sitemap: https://poojitha-nagavalli.vercel.app/sitemap.xml

@@ -6,6 +6,15 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Head from "next/head";
 
+interface AboutSectionProps {
+  bio: string;
+  phone: string;
+  email: string;
+  location: string;
+  linkedin: string;
+  website: string;
+}
+
 interface Skill {
   title: string;
   description: string;
@@ -19,7 +28,14 @@ const skills: Skill[] = [
 
 const profileImages = ["/poojitha1.jpg", "/poojitha2.jpg", "/poojitha3.jpg"];
 
-export default function AboutSection() {
+export default function AboutSection({
+  bio,
+  phone,
+  email,
+  location,
+  linkedin,
+  website,
+}: AboutSectionProps) {
   const router = useRouter();
   const [profileIndex, setProfileIndex] = useState(0);
 
@@ -92,25 +108,30 @@ export default function AboutSection() {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              I'm <strong className="text-green-600 dark:text-green-400">Penumarthi Poojitha Nagavalli</strong>, a{" "}
-              <strong>horticulture and sustainable agriculture researcher</strong> dedicated to climate-resilient farming, biodiversity conservation, and crop innovation. With experience at{" "}
-              <strong>ICAR-NIRCA</strong> and{" "}
-              <strong>Watershed Support Services Network</strong>, I design innovative farming models, promote natural farming, and lead community-driven agricultural projects.
+              {bio}
             </motion.p>
 
-            <motion.p
-              className="text-base md:text-lg text-gray-700 dark:text-gray-400 mt-2"
+            <motion.ul
+              className="text-gray-700 dark:text-gray-300 mt-2 space-y-2 text-left"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              My journey spans from{" "}
-              <strong>fruit science research and publications</strong> to{" "}
-              <strong>international collaborations like CROPS4HD</strong>. I have worked on value-added product development with turmeric, ashwagandha, and chilli, alongside initiatives improving soil health, farmer seed systems, and women empowerment.
-            </motion.p>
+              <li><strong>Phone:</strong> {phone}</li>
+              <li><strong>Email:</strong> {email}</li>
+              <li><strong>Location:</strong> {location}</li>
+              <li>
+                <strong>LinkedIn:</strong>{" "}
+                <a href={linkedin} className="text-green-600 underline" target="_blank" rel="noopener noreferrer">{linkedin}</a>
+              </li>
+              <li>
+                <strong>Website:</strong>{" "}
+                <a href={website} className="text-green-600 underline" target="_blank" rel="noopener noreferrer">{website}</a>
+              </li>
+            </motion.ul>
 
             <motion.p
-              className="text-sm font-medium text-gray-400 italic"
+              className="text-sm font-medium text-gray-400 italic mt-4"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.8 }}

@@ -19,7 +19,18 @@ const Typewriter = dynamic(
   { ssr: false }
 );
 
-export default function HeroSection() {
+// ✅ Added props interface
+interface HeroSectionProps {
+  name: string;
+  title: string;
+  tagline: string;
+}
+
+export default function HeroSection({
+  name,
+  title,
+  tagline,
+}: HeroSectionProps) {
   const { theme } = useTheme();
   const backgroundRef = useRef<HTMLDivElement>(null);
   const [isClient, setIsClient] = useState(false);
@@ -29,7 +40,9 @@ export default function HeroSection() {
   useEffect(() => setIsClient(true), []);
   useEffect(() => {
     document.body.style.overflow = showResume ? "hidden" : "auto";
-    return () => { document.body.style.overflow = "auto"; };
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [showResume]);
 
   const handleViewResume = () => setShowResume(true);
@@ -57,7 +70,12 @@ export default function HeroSection() {
     >
       {/* Lottie Background - Plants/Ecology */}
       <div className="absolute inset-0 flex items-center justify-center z-0 opacity-30 pointer-events-none">
-        <Player autoplay loop src="/assets/hero/eco-nature.json" className="w-[90%] h-[90%]" />
+        <Player
+          autoplay
+          loop
+          src="/assets/hero/eco-nature.json"
+          className="w-[90%] h-[90%]"
+        />
       </div>
 
       {/* Animated circles */}
@@ -78,13 +96,11 @@ export default function HeroSection() {
       >
         <h1 className="text-[clamp(1.8rem,5vw,3rem)] font-extrabold text-gray-800 dark:text-white leading-snug">
           Hi, I&apos;m{" "}
-          <span className="text-green-700 dark:text-emerald-400">
-            Penumarthi Poojitha Nagavalli
-          </span>{" "}
+          <span className="text-green-700 dark:text-emerald-400">{name}</span>{" "}
           🌱
         </h1>
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-600 dark:text-gray-300">
-          I&apos;m a{" "}
+          {title}{" "}
           <span className="text-green-700 dark:text-emerald-400">
             <Typewriter
               words={titles}
@@ -153,13 +169,13 @@ export default function HeroSection() {
 
         <div
           className="mt-6 w-60 sm:w-72 bg-white dark:bg-gray-800 rounded-b-[2rem] rounded-t-[1rem] shadow-lg flex flex-col items-center justify-center gap-3 p-4 cursor-pointer"
-          onClick={handleViewResume}
+          onClick={() => setShowResume(true)}
         >
           <p className="text-base font-semibold text-gray-800 dark:text-gray-200 mb-1">Resume</p>
           <FileText className="w-7 h-7 text-green-700 dark:text-emerald-400 mb-2" />
           <div className="flex items-center gap-4">
             <button
-              onClick={handleViewResume}
+              onClick={() => setShowResume(true)}
               className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition text-sm sm:text-base"
             >
               <FaEye className="w-5 h-5" />
@@ -198,7 +214,7 @@ export default function HeroSection() {
             >
               <div className="flex justify-between items-center mb-6">
                 <h3 className="text-3xl font-bold text-gray-800 dark:text-white">
-                  🌿 Penumarthi Poojitha Nagavalli
+                  🌿 {name}
                 </h3>
                 <button
                   onClick={handleCloseResume}
@@ -225,10 +241,7 @@ export default function HeroSection() {
                       "Sustainable agriculture, crop physiology, post-harvest management, soil health, and climate adaptation in horticulture.",
                   },
                 ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="p-4 bg-gray-100 dark:bg-gray-800 rounded-xl shadow-sm"
-                  >
+                  <div key={index} className="p-4 bg-gray-100 dark:bg-gray-800 rounded-xl shadow-sm">
                     <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
                     <p className="whitespace-pre-line">{item.content}</p>
                   </div>
