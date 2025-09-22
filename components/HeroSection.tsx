@@ -168,12 +168,13 @@ export default function HeroSection({
       >
         <div className="relative group w-full max-w-[280px] sm:max-w-[320px] md:max-w-[384px] aspect-square">
           <Image
-            src="/poojitha2.jpg"
-            alt="Poojitha photo"
-            priority
-            fill
-            className="object-cover rounded-3xl shadow-2xl border-4 border-green-500 dark:border-emerald-600 transition-all duration-500 group-hover:scale-105 group-hover:rotate-1"
-          />
+  src="/poojitha2.jpg"
+  alt="Poojitha photo"
+  priority
+  fill
+  className="object-cover shadow-2xl border-4 border-green-500 dark:border-emerald-600 transition-all duration-500 group-hover:scale-105 group-hover:rotate-1 [clip-path:polygon(50%_0%,_80%_10%,_100%_35%,_95%_70%,_75%_100%,_40%_100%,_10%_80%,_0%_45%,_15%_15%,_40%_5%)]"
+/>
+
         </div>
 
         <div

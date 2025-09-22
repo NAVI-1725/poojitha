@@ -60,21 +60,21 @@ export default function Home() {
   }, []);
 
   const experiences = [
-  {
-    title: "Young Professional",
-    org: "ICAR-NIRCA, Rajahmundry",
-    desc: "Product diversification, value addition, marketing strategies. New product development with turmeric & ashwagandha. Quality control & FSSAI compliance.",
-    logo: "/experience/ICAR-1.png",
-    year: "Aug 2024 – Present",
-  },
-  {
-    title: "Program Officer",
-    org: "Watersheds Support Services & Activities Network, Rayalaseema",
-    desc: "Research on seed systems, natural/organic farming, biodiversity conservation. CSR projects in Satya Sai District & North Karnataka. Soil nutrient analysis and crop diversity trials.",
-    logo: "/experience/wassam.png",
-    year: "Mar 2023 – Aug 2024",
-  },
-];
+    {
+      title: "Young Professional",
+      org: "ICAR-NIRCA, Rajahmundry",
+      desc: "Product diversification, value addition, marketing strategies. New product development with turmeric & ashwagandha. Quality control & FSSAI compliance.",
+      logo: "/experience/ICAR-1.png",
+      year: "Aug 2024 – Present",
+    },
+    {
+      title: "Program Officer",
+      org: "Watersheds Support Services & Activities Network, Rayalaseema",
+      desc: "Research on seed systems, natural/organic farming, biodiversity conservation. CSR projects in Satya Sai District & North Karnataka. Soil nutrient analysis and crop diversity trials.",
+      logo: "/experience/wassam.png",
+      year: "Mar 2023 – Aug 2024",
+    },
+  ];
 
   const education: Education[] = [
     {
@@ -95,18 +95,29 @@ export default function Home() {
     "Nursery Management (CBED, Dehradun)",
   ];
 
+  // ✅ Fully updated projects array for new ProjectsSection
   const projects = [
     {
       title: "FOLU India (FISRAP Project)",
-      description: "Climate-resilient rainfed agriculture strategy",
+      description:
+        "A strategic initiative by the Food and Land Use Coalition focused on India’s agricultural and environmental sustainability, linking food systems with climate action.",
+      liveLink: "https://www.foodandlandusecoalition.org/country/india/",
+      videoLink: "https://www.facebook.com/watch/?v=7855182067873000&ref=sharing",
+      techStack: ["Sustainability", "Agriculture", "Policy"],
     },
     {
       title: "CROPS4HD Project",
-      description: "Promoted orphan crops & nutrition in Karnataka",
+      description:
+        "A collaborative global project driving innovation in climate-resilient and nutrition-focused agriculture, supporting farmers and ecosystems worldwide.",
+      liveLink: "https://crops4hd.org/",
+      techStack: ["Climate Resilience", "Agroecology", "Nutrition"],
     },
     {
       title: "ICAR-NIRCA Project",
-      description: "Value addition of Turmeric, Ashwagandha, Chilli",
+      description:
+        "A government-led research initiative under ICAR focused on crop resilience, resource optimization, and sustainable food security across India.",
+      liveLink: "https://nirca.icar.gov.in/imgclips.php",
+      techStack: ["Research", "Food Security", "Innovation"],
     },
   ];
 
@@ -123,15 +134,14 @@ export default function Home() {
         </section>
 
         <section id="about">
-  <AboutSection
-    bio="  I am Penumarthi Poojitha Nagavalli, a professional driving impactful, community-centered solutions. I specialize in program design, value chain optimization, and stakeholder engagement, having delivered measurable results at ICAR–NIRCA and WASSAN. Passionate about policy-making, innovation, and inclusive development, I translate grassroots insights into scalable, evidence-based strategies that enhance livelihoods, foster resilience, and bridge research, practice, and high-impact transformation across sectors."
-    email="ppnvalli123@gmail.com"
-    location="Rajahmundry, Andhra Pradesh"
-    linkedin="https://linkedin.com/in/poojitha-nagavalli"
-    website="https://researchgate.net/profile/Poojitha-Penumarthi"
-  />
-</section>
-
+          <AboutSection
+            bio="  I am Penumarthi Poojitha Nagavalli, a professional driving impactful, community-centered solutions. I specialize in program design, value chain optimization, and stakeholder engagement, having delivered measurable results at ICAR–NIRCA and WASSAN. Passionate about policy-making, innovation, and inclusive development, I translate grassroots insights into scalable, evidence-based strategies that enhance livelihoods, foster resilience, and bridge research, practice, and high-impact transformation across sectors."
+            email="ppnvalli123@gmail.com"
+            location="Rajahmundry, Andhra Pradesh"
+            linkedin="https://linkedin.com/in/poojitha-nagavalli"
+            website="https://researchgate.net/profile/Poojitha-Penumarthi"
+          />
+        </section>
 
         <section id="experience">
           <ExperienceSection experiences={experiences} />

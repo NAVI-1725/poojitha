@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 interface Project {
@@ -14,47 +14,18 @@ interface Project {
   techStack?: string[];
 }
 
-export default function ProjectsSection() {
-  const [sectionKey, setSectionKey] = useState(0);
+interface ProjectsSectionProps {
+  projects: Project[];
+}
 
-  useEffect(() => {
-    setSectionKey(Date.now());
-  }, []);
-
+export default function ProjectsSection({ projects }: ProjectsSectionProps) {
   const handleUnavailableClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     alert("Details not available. Please check back soon.");
   };
 
-  // ✅ Predefined projects list with new entries
-  const projects: Project[] = [
-    {
-      title: "FOLU India (FISRAP Project)",
-      description:
-        "A strategic initiative by the Food and Land Use Coalition focused on India’s agricultural and environmental sustainability, linking food systems with climate action.",
-      liveLink: "https://www.foodandlandusecoalition.org/country/india/",
-      videoLink: "https://www.facebook.com/watch/?v=7855182067873000&ref=sharing",
-      techStack: ["Sustainability", "Agriculture", "Policy"],
-    },
-    {
-      title: "CROPS4HD Project",
-      description:
-        "A collaborative global project driving innovation in climate-resilient and nutrition-focused agriculture, supporting farmers and ecosystems worldwide.",
-      liveLink: "https://crops4hd.org/",
-      techStack: ["Climate Resilience", "Agroecology", "Nutrition"],
-    },
-    {
-      title: "ICAR-NIRCA Project",
-      description:
-        "A government-led research initiative under ICAR focused on crop resilience, resource optimization, and sustainable food security across India.",
-      liveLink: "https://nirca.icar.gov.in/imgclips.php",
-      techStack: ["Research", "Food Security", "Innovation"],
-    },
-  ];
-
   return (
     <section
-      key={sectionKey}
       id="projects"
       className="relative pt-28 px-4 pb-16 min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-lime-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden"
     >
