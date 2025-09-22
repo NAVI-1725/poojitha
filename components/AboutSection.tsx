@@ -8,7 +8,6 @@ import Head from "next/head";
 
 interface AboutSectionProps {
   bio: string;
-  phone: string;
   email: string;
   location: string;
   linkedin: string;
@@ -53,11 +52,8 @@ const profileImages = ["/poojitha1.jpg", "/poojitha2.jpg", "/poojitha3.jpg"];
 
 export default function AboutSection({
   bio,
-  phone,
   email,
   location,
-  linkedin,
-  website,
 }: AboutSectionProps) {
   const router = useRouter();
   const [profileIndex, setProfileIndex] = useState(0);
@@ -140,17 +136,10 @@ export default function AboutSection({
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              <li><strong>Phone:</strong> {phone}</li>
+            
               <li><strong>Email:</strong> {email}</li>
               <li><strong>Location:</strong> {location}</li>
-              <li>
-                <strong>LinkedIn:</strong>{" "}
-                <a href={linkedin} className="text-green-600 underline" target="_blank" rel="noopener noreferrer">{linkedin}</a>
-              </li>
-              <li>
-                <strong>Website:</strong>{" "}
-                <a href={website} className="text-green-600 underline" target="_blank" rel="noopener noreferrer">{website}</a>
-              </li>
+              
             </motion.ul>
 
             <motion.p
