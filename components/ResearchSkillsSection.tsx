@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const skills = [
   { name: "Community Engagement, Capacity Building & Farmer Empowerment", bg: "/skill logos/feild1.jpg" },
+  { name: "Stakeholder Engagement & Networking, Communication & Knowledge Dissemination", bg: "/skill logos/feild7.jpg" },
   { name: "Communication & Knowledge Dissemination", bg: "/skill logos/feild2.jpg" },
-  { name: "Soil Health Analysis", bg: "/skill logos/feild3.jpg" },
   { name: "Monitoring, Evaluation & Reporting", bg: "/skill logos/feild4.jpg" },
   { name: "Linking Grassroots Insights with Policy & Development Goals", bg: "/skill logos/feild5.jpg" },
   { name: "Policy Support & Evidence-Based Program Design", bg: "/skill logos/feild6.jpg" },
