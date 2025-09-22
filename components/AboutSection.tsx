@@ -22,18 +22,6 @@ interface Skill {
 
 const skills: Skill[] = [
   { 
-    title: "Sustainable Agriculture", 
-    description: "Experienced in climate-resilient farming models, crop diversification, biodiversity conservation, and sustainable development, integrating grassroots insights into scalable solutions." 
-  },
-  { 
-    title: "Horticulture & Value Addition", 
-    description: "Specialized in fruit science, product diversification of turmeric, ashwagandha, and chilli with focus on quality and innovation." 
-  },
-  { 
-    title: "Community Engagement", 
-    description: "Led CSR projects, empowered women, enhanced soil and water management, and collaborated with farmers for the adoption of natural farming and livelihood improvement." 
-  },
-  { 
     title: "📊 Project Management & Policy-Making", 
     description: "Proven expertise in program design, multi-stakeholder coordination, and policy-making support, ensuring evidence-based strategies for rural and agricultural development." 
   },
@@ -45,6 +33,19 @@ const skills: Skill[] = [
     title: "🏛 Engagement with Government & Institutions", 
     description: "Worked closely with government bodies, research institutes, and development organizations to align field practices with national and global sustainability goals." 
   },
+  { 
+    title: "Sustainable Agriculture", 
+    description: "Experienced in climate-resilient farming models, crop diversification, biodiversity conservation, and sustainable development, integrating grassroots insights into scalable solutions." 
+  },
+  { 
+    title: "Horticulture & Value Addition", 
+    description: "Specialized in fruit science, product diversification of turmeric, ashwagandha, and chilli with focus on quality and innovation." 
+  },
+  { 
+    title: "Community Engagement", 
+    description: "Led CSR projects, empowered women, enhanced soil and water management, and collaborated with farmers for the adoption of natural farming and livelihood improvement." 
+  },
+  
 ];
 
 
@@ -158,8 +159,7 @@ export default function AboutSection({
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.8 }}
             >
-              Researcher • Horticulturist • 
-              Sustainable Agriculture
+              Monitoring, Evaluation & Reporting (M&E) • Community Engagement & Capacity Building • Policy Support & Evidence-Based Strategy
             </motion.p>
           </div>
         </div>

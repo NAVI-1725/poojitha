@@ -122,7 +122,7 @@ export default function HeroSection({
         </a>
         <div className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6 mt-8">
           {[
-            { title: "5+", desc: "Research Papers" },
+            { title: "5+", desc: "Research Papers & case studies" },
             { title: "3+", desc: "Years in Horticulture" },
             { title: "4+", desc: "Field Projects" },
           ].map((stat, idx) => (
