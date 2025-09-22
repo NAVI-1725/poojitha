@@ -45,7 +45,7 @@ export default function ExperienceSection({ experiences }: ExperienceSectionProp
         💼 Experience
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto perspective-1000">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto justify-center items-center perspective-1000">
         {experiences.map((exp, i) => (
           <motion.div
             key={i}

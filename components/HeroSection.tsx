@@ -168,7 +168,7 @@ export default function HeroSection({
       >
         <div className="relative group w-full max-w-[280px] sm:max-w-[320px] md:max-w-[384px] aspect-square">
           <Image
-            src="/poojitha1.jpg"
+            src="/poojitha2.jpg"
             alt="Poojitha photo"
             priority
             fill

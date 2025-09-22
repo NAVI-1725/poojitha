@@ -10,24 +10,47 @@ interface Project {
   image?: string;
   codeLink?: string;
   liveLink?: string;
+  videoLink?: string;
   techStack?: string[];
 }
 
-interface ProjectsSectionProps {
-  projects: Project[];
-}
-
-export default function ProjectsSection({ projects }: ProjectsSectionProps) {
+export default function ProjectsSection() {
   const [sectionKey, setSectionKey] = useState(0);
 
   useEffect(() => {
     setSectionKey(Date.now());
-  }, [projects]);
+  }, []);
 
   const handleUnavailableClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     alert("Details not available. Please check back soon.");
   };
+
+  // ✅ Predefined projects list with new entries
+  const projects: Project[] = [
+    {
+      title: "FOLU India (FISRAP Project)",
+      description:
+        "A strategic initiative by the Food and Land Use Coalition focused on India’s agricultural and environmental sustainability, linking food systems with climate action.",
+      liveLink: "https://www.foodandlandusecoalition.org/country/india/",
+      videoLink: "https://www.facebook.com/watch/?v=7855182067873000&ref=sharing",
+      techStack: ["Sustainability", "Agriculture", "Policy"],
+    },
+    {
+      title: "CROPS4HD Project",
+      description:
+        "A collaborative global project driving innovation in climate-resilient and nutrition-focused agriculture, supporting farmers and ecosystems worldwide.",
+      liveLink: "https://crops4hd.org/",
+      techStack: ["Climate Resilience", "Agroecology", "Nutrition"],
+    },
+    {
+      title: "ICAR-NIRCA Project",
+      description:
+        "A government-led research initiative under ICAR focused on crop resilience, resource optimization, and sustainable food security across India.",
+      liveLink: "https://nirca.icar.gov.in/imgclips.php",
+      techStack: ["Research", "Food Security", "Innovation"],
+    },
+  ];
 
   return (
     <section
@@ -66,6 +89,16 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
             <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-40 transition-all duration-700 bg-gradient-to-br from-emerald-300 via-green-300 to-transparent blur-xl z-0" />
 
             <div className="relative z-10 flex flex-col items-center text-center">
+              {project.image && (
+                <div className="w-full mb-4 overflow-hidden rounded-xl">
+                  <img
+                    src={project.image}
+                    alt={`${project.title} image`}
+                    className="w-full h-40 object-cover rounded-xl shadow-sm"
+                  />
+                </div>
+              )}
+
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-1">
                 {project.title}
               </h3>
@@ -93,15 +126,51 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
                 </div>
               )}
 
-              {/* View Button */}
-              <div className="flex justify-center gap-3 mt-2">
-                <a
-                  href="#"
-                  onClick={handleUnavailableClick}
-                  className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium rounded-full bg-green-600 text-white hover:bg-green-700 shadow-sm"
-                >
-                  View
-                </a>
+              {/* View / Watch / Source Buttons */}
+              <div className="flex flex-wrap justify-center gap-3 mt-2">
+                {project.liveLink ? (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open ${project.title} site`}
+                    className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium rounded-full bg-green-600 text-white hover:bg-green-700 shadow-sm"
+                  >
+                    View
+                  </a>
+                ) : (
+                  <a
+                    href="#"
+                    onClick={handleUnavailableClick}
+                    className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium rounded-full bg-green-600 text-white hover:bg-green-700 shadow-sm"
+                  >
+                    View
+                  </a>
+                )}
+
+                {project.videoLink && (
+                  <a
+                    href={project.videoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Watch ${project.title} video`}
+                    className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium rounded-full bg-white text-green-700 border border-green-200 hover:bg-green-50 shadow-sm"
+                  >
+                    Watch
+                  </a>
+                )}
+
+                {project.codeLink && (
+                  <a
+                    href={project.codeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Source for ${project.title}`}
+                    className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium rounded-full bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 hover:bg-gray-200 shadow-sm"
+                  >
+                    Source
+                  </a>
+                )}
               </div>
             </div>
           </motion.div>
