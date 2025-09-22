@@ -1,5 +1,4 @@
-# dependencies
-node_modules/
+
 .venv/
 venv/
 
@@ -8,10 +7,22 @@ venv/
 out/
 
 # misc
-dist/
 build/
 *.log
 
 # system files
 .DS_Store
 Thumbs.db
+
+# Python
+venv/
+__pycache__/
+
+# Node.js
+node_modules/
+.next/
+dist/
+
+# IDE / OS
+.vscode/
+.DS_Store
