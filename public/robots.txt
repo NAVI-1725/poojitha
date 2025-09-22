@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://navya-sree-ram-kumar-chowdary.vercel.app
+
+# Sitemaps
+Sitemap: https://navya-sree-ram-kumar-chowdary.vercel.app/sitemap.xml

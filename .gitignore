@@ -1,0 +1,17 @@
+# dependencies
+node_modules/
+.venv/
+venv/
+
+# next.js build
+.next/
+out/
+
+# misc
+dist/
+build/
+*.log
+
+# system files
+.DS_Store
+Thumbs.db

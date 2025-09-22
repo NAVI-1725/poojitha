@@ -1,0 +1,103 @@
+Directory structure of: C:/Users/kumar/Navya-Sree-Ram-Kumar-Chowdary
+
+📄 .gitattributes
+📄 .gitignore
+📄 README.md
+📁 app/
+    📁 api/
+        📁 contributions/
+            📄 route.ts
+    📄 layout.tsx
+    📄 page.tsx
+📁 components/
+    📄 AboutSection.tsx
+    📄 ContactSection.tsx
+    📄 DarkModeToggle.tsx
+    📄 EducationSection.tsx
+    📄 ExperienceSection.tsx
+    📄 Footer.tsx
+    📄 HeroSection.tsx
+    📄 Navbar.tsx
+    📄 ProjectsSection.tsx
+    📄 SeoSchema.tsx
+    📄 TechStackSection.jsx
+📁 constants/
+    📄 TechStack.js
+    📄 projects.ts
+📄 et --hard cd15c8f3127252faf59c52045c53eff53d024699
+📁 hooks/
+    📄 useLocalStorage.ts
+📁 lib/
+    📄 githubContributions.ts
+    📄 utils.ts
+📄 next-env.d.ts
+📄 next-sitemap.config.js
+📄 next.config.js
+📄 package-lock.json
+📄 package.json
+📄 postcss.config.js
+📁 public/
+    📁 assets/
+        📄 .gitkeep
+    📁 experience/
+        📄 P34.pdf
+        📄 amazon.png
+        📄 blog.png
+        📄 bosch.png
+        📄 bosch_certificate.jpg
+        📄 franklin.png
+        📄 iiitr.png
+        📄 isc.png
+        📄 resume.png
+        📄 svnit.png
+    📄 favicon.ico
+    📄 google5f56562e7f2c1720.html
+    📁 images/
+        📄 careerpoint.jpg
+        📄 iiitr.jpg
+        📄 ssvn.png
+    📄 navi - Copy.jpg
+    📄 navi.png
+    📄 navi1.jpg
+    📄 navi2.jpg
+    📄 navi3.jpg
+    📄 navi4.jpg
+    📄 navi5.jpg
+    📄 navi6.jpg
+    📄 resume.pdf
+    📄 robots.txt
+    📄 sitemap-0.xml
+    📄 sitemap.xml
+    📁 skill logos/
+        📄 Mysql_logo.png
+        📄 Postgresql.png
+        📄 aws.png
+        📄 bootstrap.png
+        📄 cpp.png
+        📄 digitalocean.png
+        📄 expressjs.png
+        📄 fastapi.svg
+        📄 firebase.png
+        📄 flask.webp
+        📄 flutter.png
+        📄 git.png
+        📄 github.png
+        📄 html5.png
+        📄 javascript.png
+        📄 matlab.svg
+        📄 mongo.svg
+        📄 nextjs.png
+        📄 nodejs.png
+        📄 nodejs.svg
+        📄 php.svg
+        📄 python.png
+        📄 react.svg
+        📄 selenium.png
+        📄 tailwindcss.png
+        📄 typescript.svg
+📄 structure.txt
+📁 styles/
+    📄 globals.css
+📄 tailwind.config.js
+📄 tsconfig.json
+

@@ -1,0 +1,188 @@
+/* styles\globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+/* Base Styles */
+body {
+  @apply font-sans text-gray-800 bg-white scroll-smooth;
+  font-family: 'Inter', 'Montserrat', sans-serif;
+  background: radial-gradient(circle at 20% 20%, #e0f7fa, #ffffff);
+}
+
+/* Dark Mode Base */
+.dark body {
+  background: radial-gradient(circle at 20% 20%, #0f172a, #1e293b);
+  color: #f1f5f9;
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Resume Container */
+.resume-container {
+  width: 80%;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: moveResume 2s ease-in-out infinite alternate;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 25px;
+}
+
+.section h2 {
+  color: #003366;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Animations */
+@keyframes moveResume {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+/* List Styling */
+ul {
+  margin-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* 3D Live Motion Animation Background */
+.bg-3d-anim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -20; /* Slightly behind other backgrounds */
+  pointer-events: none;
+  perspective: 800px;
+}
+
+.bg-3d-anim::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  /* A gradient that adapts to light/dark mode: darker in light mode, lighter in dark */
+  background: linear-gradient(60deg, var(--bg-start), var(--bg-end));
+  animation: animate3d 25s linear infinite;
+  transform-style: preserve-3d;
+  opacity: 0.5; /* Increased opacity */
+  mix-blend-mode: overlay;
+}
+
+/* Default colors for light mode (dark background) */
+:root {
+  --bg-start: #1a1a1a;
+  --bg-end: #000000;
+}
+
+/* In dark mode, switch to lighter colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-start: #f0f0f0;
+    --bg-end: #ffffff;
+  }
+}
+
+/* Keyframes for more dynamic 3D motion */
+@keyframes animate3d {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) translateZ(0px);
+  }
+  50% {
+    transform: rotateX(180deg) rotateY(180deg) translateZ(100px);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) translateZ(0px);
+  }
+}
+
+
+/* Custom Tailwind Utilities */
+@layer utilities {
+  .animate-bounce-slow {
+    animation: bounceSlow 2.5s infinite;
+  }
+
+  @keyframes bounceSlow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 1.2s ease-in-out both;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .glow-hover:hover {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5), 0 0 40px rgba(139, 92, 246, 0.3);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .glass {
+    @apply bg-white/30 backdrop-blur-md border border-white/20 dark:bg-gray-800/40 dark:border-white/10;
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-8;
+  }
+}
+/* Prevent horizontal scroll on all pages */
+html, body {
+  overflow-x: hidden;
+}
