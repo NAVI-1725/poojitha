@@ -148,6 +148,14 @@ export default function HeroSection({
           <a href="mailto:ppnvalli123@gmail.com" className="hover:scale-110 transition">
             <Mail className="w-7 h-7 text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-emerald-400" />
           </a>
+          <a
+            href="https://researchgate.net/profile/Poojitha-Penumarthi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 transition"
+          >
+            <FaEye className="w-7 h-7 text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-emerald-400" />
+          </a>
         </div>
       </motion.div>
 
