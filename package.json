@@ -1,5 +1,5 @@
 {
-  "name": "penumarthi-navya-sree-ram-kumar-chowdary",
+  "name": "poojitha-nagavalli",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "postbuild": "next-sitemap",
-    "lint": "next lint",
-    "prepare": "husky install"  
+    "lint": "next lint"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -38,7 +37,7 @@
   "devDependencies": {
     "@types/node": "20.11.24", 
     "@types/react": "18.2.61", 
-    "@types/react-dom": "18.2.19"
+    "@types/react-dom": "18.2.19" 
   },
   "engines": {
     "node": ">=20.0.0", 
