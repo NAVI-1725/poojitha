@@ -4,6 +4,8 @@ import "../styles/globals.css";
 import { ReactNode } from "react";
 import SeoSchema from "@/components/SeoSchema";
 
+<meta name="google-site-verification" content="dngPrn_xrdnDoWtyLxrNXfC49QPFKoTqjVkN-UiRZ5M" />
+
 export const metadata = {
   title: "Penumarthi Poojitha Nagavalli - Portfolio",
   description:
